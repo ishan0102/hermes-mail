@@ -2,13 +2,15 @@
 Send Python job alerts via email.
 
 ```python
-from hermes_mail import Client
+from hermes_mail import EmailClient
+import os
 
-hermes = Client(sender_email="mlguy@gmail.com", password=os.getenv("GMAIL_PASSWORD"))
+hermes = EmailClient(sender_email="mlguy@gmail.com", sender_password=os.getenv("GMAIL_PASSWORD"))
 hermes.send_email(
     receiver_emails=["foo@gmail.com", "bar@gmail.com"], 
     subject="cuda:0 is free", 
-    body="I finished training my models on cuda:0 so feel free to use it.")
+    body="I finished training my models on cuda:0 so feel free to use it."
+)
 ```
 `hermes_mail` works seamlessly within Python code to send emails. It is designed for sending job alerts upon completion of long-running jobs. This currently only works when the sender is a Gmail account.
 
