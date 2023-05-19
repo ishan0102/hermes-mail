@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hermes-mail"
+authors = [
+  { name="Ishan Shah", email="ishan0102@utexas.edu" },
+]
+description = "Send Python job alerts via email"
+readme = "README.md"
+requires-python = ">=3"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+]
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://github.com/ishan0102/hermes-mail"
+"Bug Tracker" = "https://github.com/ishan0102/hermes-mail/issues"
+
+[tool.hatch.version]
+path = "hermes_mail/__about__.py"
